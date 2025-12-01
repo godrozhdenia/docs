@@ -78,6 +78,7 @@
         "features/sniper",
         "features/volume-bot",
         "features/copytrade",
+        "features/wallet-tracking",
         "features/tier-system"
       ]
     }
