@@ -44,32 +44,48 @@ all wallets execute their buys simultaneously. you see:
 
 after a swarm buy, tokens are distributed across wallets.
 
-### viewing
-go to **positions** to see:
-- total tokens held across all wallets
-- average entry price
-- current value
-- profit/loss
+### positions view
+go to **swarm > positions** to see your holdings. each token shows:
+- ticker and contract address
+- number of wallets holding it
+- action buttons
 
-### selling
-two options:
-1. **sell all** - sells from all wallets
-2. **consolidate & sell** - moves everything to primary wallet first
+### per-token actions
+
+for each position you have three options:
+
+| action | what it does |
+|--------|--------------|
+| **collect** | transfer that token from all swarm wallets to master |
+| **sell** | sell from all wallets holding the token |
+| **vamp** | collect to master + sell from master with 100% slippage |
+
+### vamp (recommended for exits)
+
+vamp is the best way to exit a position:
+
+1. collects all tokens from swarm wallets to master wallet
+2. sells everything from master with 100% slippage (guaranteed execution)
+3. single large sell = better price than many small sells
+
+use **vamp** for individual tokens or **vamp all** to exit everything.
 
 ## consolidation
 
-after trading, move sol back to your primary wallet:
-1. go to **positions**
-2. tap **consolidate all**
+after trading, recover sol from swarm wallets:
+1. go to **swarm > consolidate**
+2. closes empty token accounts (recovers rent)
+3. transfers all sol to master wallet
+4. marks wallets as "used" (cleaned from ui)
 
-this transfers sol from all wallets back to your main wallet.
+## vamp all
 
-## retry failed
-
-if some wallet buys fail:
-1. go to **positions**
-2. tap **retry failed**
-3. failed wallets will attempt to buy again
+full exit from all positions:
+1. collect all tokens to master
+2. sell all from master (100% slippage)
+3. close all empty accounts
+4. consolidate all sol to master
+5. mark all swarm wallets as used
 
 ## limits by tier
 
