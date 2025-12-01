@@ -1,0 +1,101 @@
+---
+title: swarm trading
+description: 'multi-wallet coordinated buys'
+---
+
+# swarm trading
+
+swarm mode executes buys across multiple wallets simultaneously.
+
+## how it works
+
+instead of one large buy from one wallet, swarm splits your purchase across multiple wallets.
+
+each wallet executes independently, making the buys appear as separate transactions.
+
+## starting a swarm buy
+
+### quick command (fastest)
+
+```
+/swarm <token_address> <sol_per_wallet> <wallet_count>
+```
+
+example: `/swarm ABC123...pump 0.01 5`
+
+shows confirmation then executes.
+
+### via menu
+
+1. tap **buy** from main menu
+2. enter the token contract address
+3. select number of wallets (3, 5, 10, 15, 20, or custom)
+4. set amount per wallet
+5. review total cost and fees
+6. confirm to execute
+
+## wallet requirements
+
+you need enough wallets created before starting a swarm. if you select 10 wallets but only have 5, the bot will create additional wallets automatically.
+
+each wallet needs to be funded with:
+- buy amount
+- platform fee share
+- gas for transaction (~0.002 sol)
+
+## managing swarm positions
+
+after a swarm buy, tokens are distributed across wallets.
+
+### viewing positions
+
+go to **positions** to see:
+- total tokens held across all wallets
+- average entry price
+- current value
+- profit/loss percentage
+
+### selling swarm positions
+
+two options:
+
+**1. sell all**
+- sells tokens from all wallets
+- one coordinated exit
+
+**2. consolidate & sell**
+- moves all tokens to primary wallet
+- sells from single wallet
+
+## consolidation
+
+after trading, tokens and sol can be consolidated:
+
+1. go to **positions**
+2. tap **consolidate all**
+3. sol transfers back to your primary wallet
+
+small amount (~0.001 sol) left in each wallet for rent.
+
+## handling failures
+
+if some wallet buys fail:
+
+1. go to **positions**
+2. tap **retry failed**
+3. failed wallets will attempt to buy again
+
+common failure reasons:
+- insufficient sol (gas)
+- slippage exceeded
+- token liquidity dried up
+
+## tier limits
+
+| tier | max wallets per swarm |
+|------|----------------------|
+| free | 5 |
+| bronze | 25 |
+| silver | 50 |
+| gold | 100 |
+| diamond | unlimited |

@@ -1,0 +1,79 @@
+---
+title: quick start
+description: 'start trading in 2 minutes'
+---
+
+# quick start
+
+get up and running in three steps.
+
+## 1. start the bot
+
+open telegram and search for `@DemonModeBot` or click launch bot.
+
+send `/start` to begin.
+
+## 2. create your wallet
+
+from the main menu, tap **wallets** then **create wallet**.
+
+the bot generates a new solana wallet. your address is displayed and ready to use.
+
+<Warning>
+never share your private key publicly. the bot only asks for it when importing an existing wallet.
+</Warning>
+
+## 3. fund your wallet
+
+copy your wallet address and send sol from any exchange or wallet.
+
+balance updates automatically.
+
+## your first trade
+
+**quick command:**
+```
+/buy <token_address> <sol_amount>
+```
+example: `/buy ABC123...pump 0.1`
+
+**or via menu:**
+1. paste any solana token contract address into the chat
+2. review the token info
+3. select buy amount
+4. confirm
+
+## quick commands
+
+| command | usage | example |
+|---------|-------|--------|
+| /buy | single wallet buy | `/buy ABC...pump 0.1` |
+| /swarm | multi-wallet buy | `/swarm ABC...pump 0.01 5` |
+| /snipe | add snipe target | `/snipe ABC...pump` |
+| /menu | show main menu | `/menu` |
+| /help | show all commands | `/help` |
+
+## main menu
+
+| button | function |
+|--------|----------|
+| wallets | create wallets, view balances, export keys |
+| buy | multi-wallet swarm buys |
+| snipe | token sniping and watchlists |
+| volume | generate trading volume |
+| copytrade | copy other wallets |
+| positions | view and sell holdings |
+| settings | slippage, priority fees, language |
+| referrals | get your referral link |
+| tiers | view tier benefits |
+
+## next
+
+<CardGroup cols={2}>
+  <Card title="wallet management" href="/guides/wallets">
+    manage multiple wallets
+  </Card>
+  <Card title="swarm trading" href="/guides/swarm">
+    buys across multiple wallets
+  </Card>
+</CardGroup>

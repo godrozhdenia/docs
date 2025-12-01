@@ -1,0 +1,44 @@
+---
+title: security
+description: 'how your keys are handled'
+---
+
+# security
+
+your private keys are stored with AES-256-GCM encryption.
+
+## how it works
+
+when you create a wallet:
+
+- private key is encrypted immediately with AES-256-GCM
+- encrypted keys are stored in our database
+- keys are decrypted only at the moment of transaction signing
+- after signing, the decrypted key is discarded from memory
+
+## storage
+
+- **encrypted at rest** - keys are never stored in plaintext
+- **decrypted on-demand** - only when you execute a trade
+- **your telegram ID** - used as part of the encryption key derivation
+
+## best practices
+
+<AccordionGroup>
+  <Accordion title="backup your keys">
+    use the export key function in wallets to save your private keys somewhere safe. store them offline.
+  </Accordion>
+  <Accordion title="don't keep large amounts">
+    keep only what you need for active trading. move profits to a hardware wallet or exchange.
+  </Accordion>
+  <Accordion title="check before you trade">
+    always verify token contract addresses before buying. we show you info but can't guarantee a token is legitimate.
+  </Accordion>
+  <Accordion title="never share your key">
+    we will never ask for your private key. anyone who does is trying to scam you.
+  </Accordion>
+</AccordionGroup>
+
+## questions?
+
+join our [telegram community](https://t.me/demonmodegroup) if you have security questions.

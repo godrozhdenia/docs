@@ -1,0 +1,84 @@
+---
+title: token sniper
+description: 'auto-buy new token launches'
+---
+
+# token sniper
+
+automatically buy new token launches within milliseconds.
+
+## how it works
+
+1. add tickers or contract addresses to your watchlist
+2. set your buy amount and slippage
+3. when a matching token launches, the bot buys automatically
+
+## sniper modes
+
+### manual snipe
+enter a token address and buy immediately. for tokens that just launched.
+
+### watchlist snipe
+add tickers or addresses to watch. when matching tokens launch, auto-buy triggers.
+
+### auto snipe (bronze+ tier)
+snipe any new token matching your filters without manual setup.
+
+## settings
+
+### buy amount
+how much sol to spend per snipe:
+- 0.1, 0.25, 0.5, 1, 2 sol
+- or custom amount
+
+### slippage
+recommended: 30-50% for new launches (high volatility expected)
+
+### stop loss / take profit
+automatically sell when price moves:
+- **stop loss**: sell if price drops x%
+- **take profit**: sell if price rises x%
+
+set both to manage risk automatically.
+
+## watchlist
+
+### adding items
+
+**by ticker:**
+type the ticker like `PEPE` and it will match any token with that in the name.
+
+**by contract address:**
+paste the full contract address for exact matching.
+
+### removing items
+1. go to **snipe** > **watchlist**
+2. tap the item to remove
+3. confirm
+
+## positions
+
+after a successful snipe, the position appears in your sniper positions.
+
+### quick sell
+- 25% - take partial profits
+- 50% - half position
+- 75% - leave runners
+- 100% - close entirely
+
+### close all
+sells all sniper positions at once.
+
+## limits by tier
+
+| tier | active snipes |
+|------|---------------|
+| free | 1 |
+| bronze | 3 |
+| silver | 5 |
+| gold | 10 |
+| diamond | unlimited |
+
+## speed
+
+snipes execute in under 500ms from token launch.

@@ -1,0 +1,96 @@
+---
+title: volume bot
+description: 'generate trading volume'
+---
+
+# volume bot
+
+generate trading activity on any token with randomized buy/sell cycles.
+
+## how it works
+
+1. creates or uses existing volume wallets
+2. distributes sol across wallets
+3. executes random buy/sell trades at random intervals
+4. continues for configured duration
+5. consolidates all funds back to your primary wallet
+
+## starting a session
+
+1. tap **volume** from main menu
+2. enter the token contract address
+3. configure:
+   - number of wallets
+   - total sol to use
+   - session duration
+4. review and confirm
+
+## settings
+
+### number of wallets
+more wallets = more unique addresses in transaction history.
+
+| option | effect |
+|--------|--------|
+| 3-5 | minimal activity |
+| 10-15 | moderate activity |
+| 20+ | high activity, appears more organic |
+
+### total sol
+the amount distributed across wallets for trading. this sol is recycled - each wallet buys, sells, buys again, etc.
+
+you don't lose the total sol amount. it's used for trading and consolidated back at the end (minus slippage and fees).
+
+### duration
+
+| option | use case |
+|--------|----------|
+| 15 min | quick push |
+| 30 min | sustained activity |
+| 1 hour | extended visibility |
+| 2 hours | major campaign |
+| 4 hours | full trading session |
+
+## managing sessions
+
+### viewing active session
+shows:
+- session id
+- token being traded
+- wallet count
+- trades executed
+- volume generated
+- time remaining
+
+### stopping early
+tap **stop session** to:
+1. halt all trading
+2. sell remaining tokens
+3. consolidate sol back to primary wallet
+
+## consolidation
+
+when a session ends (completed or stopped):
+1. all tokens in volume wallets are sold
+2. sol is transferred back to your primary wallet
+3. small amount left in each wallet for rent
+
+### expected returns
+
+| input | typical return |
+|-------|---------------|
+| 10 sol | 9.5-9.8 sol |
+| 50 sol | 48-49 sol |
+| 100 sol | 96-98 sol |
+
+losses are from trading slippage, token spread, platform fees, and gas.
+
+## limits by tier
+
+| tier | max wallets | max duration |
+|------|-------------|--------------|
+| free | 5 | 15 min |
+| bronze | 15 | 1 hour |
+| silver | 25 | 2 hours |
+| gold | 50 | 4 hours |
+| diamond | 100 | 8 hours |

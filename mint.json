@@ -1,0 +1,89 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "Demon Mode",
+  "logo": {
+    "dark": "/logo/dark.png",
+    "light": "/logo/light.png"
+  },
+  "favicon": "/favicon.png",
+  "colors": {
+    "primary": "#DC2626",
+    "light": "#EF4444",
+    "dark": "#B91C1C",
+    "anchors": {
+      "from": "#DC2626",
+      "to": "#EF4444"
+    }
+  },
+  "topbarLinks": [
+    {
+      "name": "Telegram",
+      "url": "https://t.me/demonmodegroup"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Launch Bot",
+    "url": "https://t.me/DemonModeBot"
+  },
+  "tabs": [
+    {
+      "name": "Guides",
+      "url": "guides"
+    },
+    {
+      "name": "Features",
+      "url": "features"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "Community",
+      "icon": "telegram",
+      "url": "https://t.me/demonmodegroup"
+    },
+    {
+      "name": "Twitter",
+      "icon": "twitter",
+      "url": "https://twitter.com/demonmodebot"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Get Started",
+      "pages": [
+        "introduction",
+        "quickstart",
+        "security"
+      ]
+    },
+    {
+      "group": "Guides",
+      "pages": [
+        "guides/wallets",
+        "guides/trading",
+        "guides/swarm",
+        "guides/sniper",
+        "guides/volume",
+        "guides/copytrade",
+        "guides/referrals"
+      ]
+    },
+    {
+      "group": "Features",
+      "pages": [
+        "features/overview",
+        "features/wallet-manager",
+        "features/trade-engine",
+        "features/swarm-system",
+        "features/sniper",
+        "features/volume-bot",
+        "features/copytrade",
+        "features/tier-system"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "twitter": "https://twitter.com/demonmodebot",
+    "telegram": "https://t.me/demonmodegroup"
+  }
+}

@@ -1,0 +1,87 @@
+---
+title: wallet management
+description: 'create, manage, and secure your wallets'
+---
+
+# wallet management
+
+demon mode supports multiple wallets per user.
+
+## creating wallets
+
+from the main menu:
+
+1. tap **wallets**
+2. tap **create wallet**
+3. your new wallet is instantly available
+
+the wallet address is displayed and your private key is encrypted.
+
+<Info>
+your first wallet is automatically your primary wallet for single trades.
+</Info>
+
+## viewing balances
+
+the wallets menu shows:
+- wallet address (shortened)
+- sol balance
+- total value across all wallets
+
+tap **refresh** to update balances.
+
+## importing existing wallets
+
+to import a wallet you already have:
+
+1. go to **wallets**
+2. tap **import wallet**
+3. paste your private key
+
+the key is immediately encrypted. the original message is deleted for security.
+
+<Warning>
+only import keys in a private chat. never share private keys in group chats.
+</Warning>
+
+## exporting keys
+
+to backup your private key:
+
+1. go to **wallets**
+2. select the wallet
+3. tap **export key**
+
+the key is displayed once and the message auto-deletes after 60 seconds.
+
+## wallet limits by tier
+
+| tier | max wallets |
+|------|-------------|
+| free | 5 |
+| bronze | 25 |
+| silver | 50 |
+| gold | 100 |
+| diamond | unlimited |
+
+## consolidating funds
+
+to move all sol from sub-wallets back to your primary wallet:
+
+1. go to **positions**
+2. tap **consolidate all**
+
+this transfers sol from all wallets to your first wallet, leaving a small amount for rent.
+
+## deleting wallets
+
+<Warning>
+deleting a wallet removes the encrypted key from storage. make sure you've exported it first if you need it.
+</Warning>
+
+1. go to **wallets**
+2. select the wallet
+3. tap **delete**
+4. confirm deletion
+
+any remaining sol should be withdrawn first.

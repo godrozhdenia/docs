@@ -1,0 +1,131 @@
+---
+title: sniper
+description: 'auto-snipe new token launches'
+---
+
+# token sniper
+
+the sniper monitors for new token launches and executes buys within milliseconds.
+
+## quick command
+
+```
+/snipe <token_address>
+```
+
+example: `/snipe ABC123...pump`
+
+adds token to sniper with your saved settings.
+
+## sniper modes
+
+### manual snipe
+enter a token address and execute immediately. useful when you spot a token that just launched.
+
+### watchlist snipe
+add tickers or contract addresses to a watchlist. when matching tokens launch, the bot automatically buys.
+
+### auto snipe (bronze+ tier)
+automatically snipes tokens matching your configured filters without manual intervention.
+
+## setting up
+
+1. tap **snipe** from main menu
+2. configure your settings
+3. add to watchlist or wait for launches
+
+## sniper settings
+
+### buy amount
+how much sol to spend per snipe:
+- 0.1, 0.25, 0.5, 1, 2 sol
+- or custom amount
+
+### slippage
+recommended: 30-50% for new launches (high volatility expected)
+
+### stop loss / take profit
+automatically sell when price moves:
+- **stop loss**: sell if price drops x%
+- **take profit**: sell if price rises x%
+
+set both to manage risk automatically.
+
+## watchlist management
+
+### adding to watchlist
+
+**by ticker:**
+type the ticker like `PEPE` and it will match any token with that in the name.
+
+**by contract address:**
+paste the full contract address for exact matching.
+
+### removing from watchlist
+1. go to **snipe** > **watchlist**
+2. tap the item to remove
+3. confirm removal
+
+## position management
+
+after a successful snipe, the position appears in your sniper positions.
+
+### viewing positions
+- token name and symbol
+- entry price
+- current price
+- p&l percentage
+- sl/tp levels
+
+### quick sell
+from positions menu:
+- 25% - take partial profits
+- 50% - half position
+- 75% - leave runners
+- 100% - close entirely
+
+### close all
+sells all sniper positions at once.
+
+## auto sl/tp execution
+
+when you set stop loss or take profit:
+
+1. monitor checks prices regularly
+2. if trigger price is hit, sell executes automatically
+3. position updates to "stopped_out" or "took_profit"
+
+<Info>
+sl/tp execution uses jupiter for best routing. actual exit price may differ slightly from trigger due to slippage.
+</Info>
+
+## sniper limits by tier
+
+| tier | active snipe positions |
+|------|----------------------|
+| free | 1 |
+| bronze | 3 |
+| silver | 5 |
+| gold | 10 |
+| diamond | unlimited |
+
+## tips
+
+<AccordionGroup>
+  <Accordion title="set realistic sl/tp">
+    new tokens are volatile. 50% sl and 200% tp are common starting points.
+  </Accordion>
+  <Accordion title="don't oversize">
+    most snipes are high risk. keep position sizes small relative to portfolio.
+  </Accordion>
+  <Accordion title="research beforehand">
+    if you're adding to watchlist, research the project first. not every launch is worth sniping.
+  </Accordion>
+  <Accordion title="monitor actively">
+    even with auto sl/tp, check positions regularly. liquidity can disappear faster than price updates.
+  </Accordion>
+</AccordionGroup>
+
+## speed
+
+snipes execute in under 500ms from token launch to buy confirmation.

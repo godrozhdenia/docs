@@ -1,0 +1,97 @@
+---
+title: copy trading
+description: 'automatically copy trades from successful wallets'
+---
+
+# copy trading
+
+track and automatically copy trades from any solana wallet.
+
+## how it works
+
+1. add target wallet addresses to track
+2. configure copy settings (amount, filters)
+3. bot monitors target transactions in real-time
+4. when target makes a trade, bot copies it to your wallet
+
+## adding target wallets
+
+1. tap **copytrade** from main menu
+2. tap **add target**
+3. paste the wallet address you want to copy
+4. optionally add a label (e.g., "whale1", "alphatrader")
+
+## configuring copy settings
+
+### per-target settings
+
+each target can have individual settings:
+
+| setting | description |
+|---------|-------------|
+| buy amount | fixed sol amount per copy, or % of target's trade |
+| min trade size | only copy trades above this threshold |
+| max trade size | cap your copy size |
+| auto sell | copy sells, or hold independently |
+| enabled | toggle copying on/off without removing |
+
+## monitoring targets
+
+the copytrade menu shows:
+- target wallet (shortened)
+- label if set
+- number of trades copied
+- p&l from copies
+- enabled status
+
+tap a target to:
+- view detailed stats
+- edit settings
+- disable/enable
+- remove from tracking
+
+## positions from copies
+
+copied trades appear in your positions with:
+- "copy" tag
+- source wallet indicator
+- same sell controls as regular positions
+
+you can sell copied positions manually or let auto-sell handle it.
+
+## handling sells
+
+**auto sell enabled:**
+- when target sells x%, you sell x%
+- proportional to target's exit
+
+**auto sell disabled:**
+- target's sells are ignored
+- you manage exits manually
+
+## tips
+
+<AccordionGroup>
+  <Accordion title="start small">
+    copy with minimal amounts until you understand the target's style.
+  </Accordion>
+  <Accordion title="set max trade size">
+    cap exposure per trade.
+  </Accordion>
+  <Accordion title="diversify targets">
+    don't put all funds on one wallet.
+  </Accordion>
+  <Accordion title="review periodically">
+    targets can change behavior.
+  </Accordion>
+</AccordionGroup>
+
+## tier limits
+
+| tier | max tracked wallets |
+|------|---------------------|
+| free | 1 |
+| bronze | 2 |
+| silver | 3 |
+| gold | 5 |
+| diamond | 10 |

@@ -1,0 +1,115 @@
+---
+title: trading
+description: 'buy and sell tokens'
+---
+
+# trading guide
+
+single-wallet trading is the fastest way to buy and sell tokens.
+
+## buying tokens
+
+### method 1: quick command (fastest)
+
+```
+/buy <token_address> <sol_amount>
+```
+
+example: `/buy ABC123...pump 0.1`
+
+executes immediately with your saved settings.
+
+### method 2: paste contract address
+
+1. copy any solana token contract address
+2. paste it directly into the bot chat
+3. token info loads automatically
+4. select buy amount
+5. transaction executes
+
+### method 3: from main menu
+
+1. tap **trade** from main menu
+2. enter the token contract address when prompted
+3. review token info
+4. select amount and confirm
+
+## token information
+
+when you enter a token, you'll see:
+
+| field | description |
+|-------|-------------|
+| name/symbol | token identity |
+| price usd | current price in dollars |
+| price sol | current price in sol |
+| market cap | total market capitalization |
+| liquidity | available trading liquidity |
+| 24h volume | trading volume last 24 hours |
+| 1h/24h change | price change percentages |
+| buys/sells | transaction counts |
+| age | time since pair creation |
+
+## buy amounts
+
+preset amounts:
+- 0.1 sol
+- 0.25 sol
+- 0.5 sol
+- 1 sol
+- 2 sol
+- **x sol** (custom amount)
+
+for custom amounts, enter any value between 0.001 and 1000 sol.
+
+## selling tokens
+
+from the trade screen:
+1. tap **sell**
+2. choose percentage: 25%, 50%, 75%, or 100%
+3. transaction executes
+
+or from **positions**:
+1. view your holdings
+2. select a position
+3. choose sell percentage
+
+## trade settings
+
+access via **settings** menu:
+
+### slippage
+how much price movement you'll tolerate:
+- 5% - tight, may fail on volatile tokens
+- 10% - balanced (recommended)
+- 30% - loose, for volatile tokens
+- custom - any percentage
+
+### priority fee
+how fast your transaction gets processed:
+- low - slower, cheapest
+- medium - balanced (recommended)
+- high - fast
+- turbo - fastest, costs more
+
+## tips
+
+<AccordionGroup>
+  <Accordion title="check liquidity first">
+    low liquidity means high slippage. if liquidity is under $10k, be cautious.
+  </Accordion>
+  <Accordion title="watch the spread">
+    large buy/sell differences indicate potential rug or manipulation.
+  </Accordion>
+  <Accordion title="verify contract">
+    always check the token contract on solscan or birdeye before trading.
+  </Accordion>
+</AccordionGroup>
+
+## quick links
+
+the trade screen provides direct links to:
+- birdeye - charts and analytics
+- dexscreener - price and liquidity data
+
+tap **refresh** to update token info if prices are moving fast.

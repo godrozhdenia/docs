@@ -1,0 +1,82 @@
+---
+title: swarm buy
+description: 'coordinated multi-wallet buys'
+---
+
+# swarm buy
+
+execute buys across multiple wallets at once.
+
+## why use swarm
+
+instead of one large buy from one wallet, swarm splits your purchase across multiple wallets:
+
+- distributes market impact
+- each wallet executes independently
+- buys appear as separate transactions
+
+## how to use
+
+1. tap **buy** from main menu
+2. enter the token contract address
+3. select number of wallets (3, 5, 10, 15, 20, or custom)
+4. set amount per wallet
+5. review total cost and fees
+6. confirm
+
+## wallet setup
+
+if you select 10 wallets but only have 5, the bot creates additional wallets automatically.
+
+each wallet needs:
+- buy amount
+- platform fee share
+- gas for transaction
+
+## execution
+
+all wallets execute their buys simultaneously. you see:
+- progress as each wallet completes
+- success/fail count
+- transaction links
+
+## managing positions
+
+after a swarm buy, tokens are distributed across wallets.
+
+### viewing
+go to **positions** to see:
+- total tokens held across all wallets
+- average entry price
+- current value
+- profit/loss
+
+### selling
+two options:
+1. **sell all** - sells from all wallets
+2. **consolidate & sell** - moves everything to primary wallet first
+
+## consolidation
+
+after trading, move sol back to your primary wallet:
+1. go to **positions**
+2. tap **consolidate all**
+
+this transfers sol from all wallets back to your main wallet.
+
+## retry failed
+
+if some wallet buys fail:
+1. go to **positions**
+2. tap **retry failed**
+3. failed wallets will attempt to buy again
+
+## limits by tier
+
+| tier | max wallets | fee |
+|------|-------------|-----|
+| free | 20 | 2.5% |
+| bronze | 25 | 2.0% |
+| silver | 50 | 1.5% |
+| gold | 100 | 1.0% |
+| diamond | 500 | 0.75% |
