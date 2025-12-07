@@ -1,30 +1,30 @@
 ---
 title: launcher
-description: 'block 0 token launching'
+description: 'block 0 token launching with jito bundles'
 ---
 
 # token launcher
 
-deploy pump.fun tokens with jito bundles for guaranteed block 0 execution.
+deploy pump.fun tokens with atomic jito bundles. all transactions land in block 0 or fail together.
 
 ## overview
 
-the launcher creates your token and executes all initial buys in a single atomic jito bundle. every transaction lands in the same block or fails together.
+the launcher uses native pump.fun instructions (not api) to create tokens with guaranteed block 0 execution. dev buy, bundle wallets, and snipers all execute atomically via jito.
 
 ## key features
 
 <CardGroup cols={2}>
   <Card title="block 0 bundles">
-    token creation + all buys in one atomic bundle. no front-running possible.
+    token create + dev buy + bundle buys in one atomic jito bundle. no front-running possible.
   </Card>
-  <Card title="bundle + snipe">
-    add sniper wallets that fire with same blockhash for block 0-1 targeting.
+  <Card title="bundle + snipe mode">
+    sniper wallets fire immediately after bundle with same blockhash. targets block 0-1.
   </Card>
   <Card title="vanity mints">
     generate custom token addresses with prefixes like "pump", "moon", etc.
   </Card>
-  <Card title="ipfs metadata">
-    automatic pinata upload. no dependency on pump.fun servers.
+  <Card title="auto creator fees">
+    automatically claim pump.fun creator fees from all launched tokens.
   </Card>
 </CardGroup>
 
@@ -55,9 +55,10 @@ if bundle+snipe mode is enabled, sniper transactions fire immediately after bund
 ## technical stack
 
 | component | purpose |
-|-----------|---------|
-| jito bundle | atomic block 0 execution |
-| helius sender | ultra-low latency tx submission |
+|-----------|--------|
+| jito block engine | atomic block 0 bundle execution |
+| helius grpc (laserstream) | real-time blockhash and account streaming |
+| helius sender | ultra-low latency tx submission via staked validators |
 | pinata ipfs | decentralized metadata storage |
 | native pump.fun instructions | direct program calls, no api dependency |
 

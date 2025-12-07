@@ -78,6 +78,7 @@
         "features/swarm-system",
         "features/sniper",
         "features/launcher",
+        "features/creator-fees",
         "features/volume-bot",
         "features/copytrade",
         "features/wallet-tracking",

@@ -1,47 +1,48 @@
 ---
 title: introduction
-description: 'solana trading bot for telegram'
+description: 'high-performance solana trading infrastructure'
 ---
 
 # demon mode
 
-telegram trading bot for solana. block 0 token launching, sniping, multi-wallet buys, volume generation, copy trading.
+high-performance solana trading bot. block 0 token launching, 0-block sniping, multi-wallet swarm execution, and automated creator fee collection.
 
-## features
+## core features
 
 <CardGroup cols={2}>
+  <Card
+    title="swarm engine"
+    href="/features/swarm-system"
+  >
+    coordinated multi-wallet execution. launch tokens, snipe, and swarm buy - all with block 0 jito bundles.
+  </Card>
   <Card
     title="token launcher"
     href="/features/launcher"
   >
-    deploy pump.fun tokens with block 0 jito bundles. bundle + snipe mode for block 0-1 execution.
+    deploy pump.fun tokens with atomic jito bundles. dev buy + bundle wallets + snipers in block 0-1.
   </Card>
   <Card
-    title="token sniping"
+    title="0-block sniper"
     href="/features/sniper"
   >
-    0-block sniping on pump.fun. watchlists, auto-snipe, stop-loss, take-profit.
+    pump.fun sniping with same-blockhash execution. auto-snipe by ticker or deployer wallet.
   </Card>
   <Card
-    title="multi-wallet trading"
-    href="/features/swarm-system"
+    title="creator fee collection"
+    href="/features/creator-fees"
   >
-    create multiple wallets and execute coordinated buys across all of them.
-  </Card>
-  <Card
-    title="copy trading"
-    href="/features/copytrade"
-  >
-    track wallets and automatically copy their trades.
+    automatic collection of pump.fun creator fees across all launched tokens.
   </Card>
 </CardGroup>
 
-## why use this
+## infrastructure
 
-- fast execution, trades in milliseconds
-- jupiter routing for best swap rates
-- encrypted key storage
-- simple telegram interface
+- **helius grpc** - laserstream for real-time account and transaction streaming
+- **helius sender** - ultra-low latency tx submission via staked validators
+- **jito bundles** - atomic block 0 execution for launches and swarms
+- **native pump.fun instructions** - direct program calls, no api dependency
+- **aes-256-gcm encryption** - military-grade key storage
 
 ## get started
 

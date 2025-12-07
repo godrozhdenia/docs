@@ -1,0 +1,54 @@
+---
+title: creator fees
+description: 'automatic pump.fun creator fee collection'
+---
+
+# creator fee collection
+
+automatically track and claim pump.fun creator fees from all tokens you've launched.
+
+## how it works
+
+pump.fun tokens generate creator fees on every trade. as the token creator, you earn a percentage of all trading volume.
+
+the bot:
+1. tracks all tokens you've launched
+2. monitors accumulated fees in real-time via helius grpc
+3. provides one-click claim to your wallet
+
+## fee collection
+
+### view fees
+
+from the main menu, go to **launcher** > **my launches**.
+
+each token shows:
+- current trading volume
+- accumulated creator fees
+- claim button
+
+### claim fees
+
+tap **claim** to collect fees to your active wallet. fees are sent via helius sender for fast confirmation.
+
+## fee rates
+
+pump.fun creator fees vary based on the token's bonding curve status:
+
+| status | creator fee |
+|--------|-------------|
+| bonding curve | 0.5% of trades |
+| graduated (raydium) | varies |
+
+## tracking
+
+the bot uses helius grpc (laserstream) to monitor:
+- all trades on your tokens
+- fee accumulation in real-time
+- bonding curve status changes
+
+## tips
+
+- **claim regularly** - don't let fees accumulate too long
+- **track performance** - see which tokens generate the most fees
+- **tier benefits** - higher tiers get priority fee claiming

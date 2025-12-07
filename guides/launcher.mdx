@@ -79,7 +79,7 @@ sniper wallets fire immediately after bundle submission. they use the same block
 ### bundle flow
 
 1. upload metadata to ipfs (pinata)
-2. get fresh blockhash from helius
+2. get fresh blockhash from helius grpc (laserstream)
 3. build create_v2 + extend_account + dev buy tx
 4. build bundle wallet buy txs
 5. submit all as jito bundle
@@ -88,9 +88,16 @@ sniper wallets fire immediately after bundle submission. they use the same block
 ### sniper flow
 
 1. build sniper txs with same blockhash as bundle
-2. submit bundle to jito
-3. immediately fire all sniper txs via helius sender
+2. submit bundle to jito block engine
+3. immediately fire all sniper txs via helius sender (staked validators)
 4. snipers race to land in block 0-1
+
+### creator fee collection
+
+pump.fun tokens generate creator fees on every trade. the bot automatically:
+1. tracks all tokens you've launched
+2. monitors accumulated fees
+3. one-click claim to your wallet
 
 ### why block 0 matters
 
@@ -98,3 +105,4 @@ sniper wallets fire immediately after bundle submission. they use the same block
 - all buys at lowest price
 - appears as organic launch
 - snipers get in before public
+- creator fees start accumulating immediately
