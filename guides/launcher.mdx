@@ -3,23 +3,21 @@ title: launcher
 description: 'deploy pump.fun tokens with block 0 bundles'
 ---
 
-# token launcher
-
-launch your own pump.fun tokens with jito bundles. dev buy + bundle wallets land in the same block as token creation.
+launch your own pump.fun tokens with jito bundles. dev buy + bundle wallets + swarm all land in the same block.
 
 ## launch modes
 
 ### bundle only
 
-create token + dev buy + bundle wallet buys in one atomic jito bundle.
-
-all transactions land in **block 0** or fail together.
+create token + dev buy + bundle wallet buys in one atomic jito bundle. all transactions land in **block 0** or fail together.
 
 ### bundle + snipe
 
-same as above, plus sniper wallets that fire immediately after bundle submission.
+bundle + sniper wallets that fire immediately after submission. snipers use **same blockhash**, targeting block 0-1.
 
-snipers use the **same blockhash** as the bundle, targeting block 0-1 inclusion.
+### bundle + swarm
+
+bundle + swarm wallets for maximum holder count. swarm wallets execute coordinated buys across many wallets in the same block as your launch.
 
 ## how to launch
 
@@ -27,14 +25,15 @@ snipers use the **same blockhash** as the bundle, targeting block 0-1 inclusion.
 2. upload token image
 3. enter name, ticker, description
 4. set dev buy amount (sol)
-5. add bundle wallets (up to your tier limit)
-6. optionally add sniper wallets
-7. set jito tip (higher = more priority)
+5. add bundle wallets (block 0)
+6. add swarm wallets (block 0, max holders)
+7. add sniper wallets (block 0-1)
+8. set jito tip (higher = more priority)
 8. review and confirm
 
 ## bundle wallets
 
-bundle wallets buy in the same block as token creation.
+bundle wallets buy in the same block as token creation. they're in the jito bundle.
 
 | tier | max bundle wallets |
 |------|-------------------|
@@ -43,6 +42,18 @@ bundle wallets buy in the same block as token creation.
 | silver | 25 |
 | gold | 50 |
 | diamond | 100 |
+
+## swarm wallets
+
+swarm wallets also buy in block 0 for maximum holder count. use swarm when you want many unique wallets holding your token at launch.
+
+| tier | max swarm wallets |
+|------|-------------------|
+| free | 10 |
+| bronze | 25 |
+| silver | 50 |
+| gold | 100 |
+| diamond | 500 |
 
 ## sniper wallets
 

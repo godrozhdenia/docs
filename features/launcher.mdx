@@ -3,13 +3,12 @@ title: launcher
 description: 'block 0 token launching with jito bundles'
 ---
 
-# token launcher
 
 deploy pump.fun tokens with atomic jito bundles. all transactions land in block 0 or fail together.
 
 ## overview
 
-the launcher uses native pump.fun instructions (not api) to create tokens with guaranteed block 0 execution. dev buy, bundle wallets, and snipers all execute atomically via jito.
+the launcher uses native pump.fun instructions (not api) to create tokens with guaranteed block 0 execution. dev buy, bundle wallets, swarm wallets, and snipers all execute atomically via jito.
 
 ## key features
 
@@ -17,11 +16,11 @@ the launcher uses native pump.fun instructions (not api) to create tokens with g
   <Card title="block 0 bundles">
     token create + dev buy + bundle buys in one atomic jito bundle. no front-running possible.
   </Card>
-  <Card title="bundle + snipe mode">
-    sniper wallets fire immediately after bundle with same blockhash. targets block 0-1.
+  <Card title="bundle + swarm">
+    launch with swarm wallets for maximum holder count. all wallets buy in block 0.
   </Card>
-  <Card title="vanity mints">
-    generate custom token addresses with prefixes like "pump", "moon", etc.
+  <Card title="bundle + snipe">
+    sniper wallets fire immediately after bundle with same blockhash. targets block 0-1.
   </Card>
   <Card title="auto creator fees">
     automatically claim pump.fun creator fees from all launched tokens.
@@ -64,13 +63,13 @@ if bundle+snipe mode is enabled, sniper transactions fire immediately after bund
 
 ## limits by tier
 
-| tier | bundle wallets | sniper wallets | discount |
-|------|----------------|----------------|----------|
-| free | 5 | 2 | 0% |
-| bronze | 10 | 5 | 10% |
-| silver | 25 | 10 | 20% |
-| gold | 50 | 25 | 35% |
-| diamond | 100 | 50 | 50% |
+| tier | bundle wallets | swarm wallets | sniper wallets | discount |
+|------|----------------|---------------|----------------|----------|
+| free | 5 | 10 | 2 | 0% |
+| bronze | 10 | 25 | 5 | 10% |
+| silver | 25 | 50 | 10 | 20% |
+| gold | 50 | 100 | 25 | 35% |
+| diamond | 100 | 500 | 50 | 50% |
 
 ## next
 
