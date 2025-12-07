@@ -1,0 +1,100 @@
+---
+title: launcher
+description: 'deploy pump.fun tokens with block 0 bundles'
+---
+
+# token launcher
+
+launch your own pump.fun tokens with jito bundles. dev buy + bundle wallets land in the same block as token creation.
+
+## launch modes
+
+### bundle only
+
+create token + dev buy + bundle wallet buys in one atomic jito bundle.
+
+all transactions land in **block 0** or fail together.
+
+### bundle + snipe
+
+same as above, plus sniper wallets that fire immediately after bundle submission.
+
+snipers use the **same blockhash** as the bundle, targeting block 0-1 inclusion.
+
+## how to launch
+
+1. go to **launcher** in bot menu
+2. upload token image
+3. enter name, ticker, description
+4. set dev buy amount (sol)
+5. add bundle wallets (up to your tier limit)
+6. optionally add sniper wallets
+7. set jito tip (higher = more priority)
+8. review and confirm
+
+## bundle wallets
+
+bundle wallets buy in the same block as token creation.
+
+| tier | max bundle wallets |
+|------|-------------------|
+| free | 5 |
+| bronze | 10 |
+| silver | 25 |
+| gold | 50 |
+| diamond | 100 |
+
+## sniper wallets
+
+sniper wallets fire immediately after bundle submission. they use the same blockhash to target block 0-1.
+
+| tier | max sniper wallets |
+|------|-------------------|
+| free | 2 |
+| bronze | 5 |
+| silver | 10 |
+| gold | 25 |
+| diamond | 50 |
+
+## features
+
+- **block 0 bundles** - atomic execution via jito
+- **vanity mints** - custom token address prefixes (pump, moon, etc)
+- **ipfs metadata** - pinata upload, no pump.fun dependency
+- **helius sender** - ultra-low latency submission
+- **configurable tips** - adjust jito tip for priority
+
+## tier discounts
+
+| tier | discount |
+|------|----------|
+| free | 0% |
+| bronze | 10% |
+| silver | 20% |
+| gold | 35% |
+| diamond | 50% |
+
+## technical details
+
+### bundle flow
+
+1. upload metadata to ipfs (pinata)
+2. get fresh blockhash from helius
+3. build create_v2 + extend_account + dev buy tx
+4. build bundle wallet buy txs
+5. submit all as jito bundle
+6. bundle lands in block 0 or fails
+
+### sniper flow
+
+1. build sniper txs with same blockhash as bundle
+2. submit bundle to jito
+3. immediately fire all sniper txs via helius sender
+4. snipers race to land in block 0-1
+
+### why block 0 matters
+
+- no front-running possible
+- all buys at lowest price
+- appears as organic launch
+- snipers get in before public

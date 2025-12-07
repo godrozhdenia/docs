@@ -63,6 +63,7 @@
         "guides/trading",
         "guides/swarm",
         "guides/sniper",
+        "guides/launcher",
         "guides/volume",
         "guides/copytrade",
         "guides/referrals"
@@ -76,6 +77,7 @@
         "features/trade-engine",
         "features/swarm-system",
         "features/sniper",
+        "features/launcher",
         "features/volume-bot",
         "features/copytrade",
         "features/wallet-tracking",

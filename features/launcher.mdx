@@ -1,0 +1,78 @@
+---
+title: launcher
+description: 'block 0 token launching'
+---
+
+# token launcher
+
+deploy pump.fun tokens with jito bundles for guaranteed block 0 execution.
+
+## overview
+
+the launcher creates your token and executes all initial buys in a single atomic jito bundle. every transaction lands in the same block or fails together.
+
+## key features
+
+<CardGroup cols={2}>
+  <Card title="block 0 bundles">
+    token creation + all buys in one atomic bundle. no front-running possible.
+  </Card>
+  <Card title="bundle + snipe">
+    add sniper wallets that fire with same blockhash for block 0-1 targeting.
+  </Card>
+  <Card title="vanity mints">
+    generate custom token addresses with prefixes like "pump", "moon", etc.
+  </Card>
+  <Card title="ipfs metadata">
+    automatic pinata upload. no dependency on pump.fun servers.
+  </Card>
+</CardGroup>
+
+## how it works
+
+### 1. metadata upload
+
+your token image and metadata are uploaded to ipfs via pinata. this happens before any blockchain interaction.
+
+### 2. bundle construction
+
+the bot builds transactions:
+- create_v2 (token creation)
+- extend_account (required for pump.fun)
+- dev buy (your initial purchase)
+- bundle wallet buys (additional wallets)
+
+all transactions use the same blockhash.
+
+### 3. jito submission
+
+the bundle is submitted to jito block engine. jito validators include all transactions atomically in block 0.
+
+### 4. sniper firing (optional)
+
+if bundle+snipe mode is enabled, sniper transactions fire immediately after bundle submission using the same blockhash to target block 0-1.
+
+## technical stack
+
+| component | purpose |
+|-----------|---------|
+| jito bundle | atomic block 0 execution |
+| helius sender | ultra-low latency tx submission |
+| pinata ipfs | decentralized metadata storage |
+| native pump.fun instructions | direct program calls, no api dependency |
+
+## limits by tier
+
+| tier | bundle wallets | sniper wallets | discount |
+|------|----------------|----------------|----------|
+| free | 5 | 2 | 0% |
+| bronze | 10 | 5 | 10% |
+| silver | 25 | 10 | 20% |
+| gold | 50 | 25 | 35% |
+| diamond | 100 | 50 | 50% |
+
+## next
+
+<Card title="launcher guide" href="/guides/launcher">
+  step-by-step launch instructions
+</Card>
