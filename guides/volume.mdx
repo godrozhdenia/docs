@@ -78,19 +78,36 @@ when a session ends (completed or stopped):
 2. sol is transferred back to your primary wallet
 3. small amount (~0.001 sol) left in each wallet for rent
 
-### expected returns
+### volume economics
 
-| input | typical return |
-|-------|---------------|
-| 10 sol | 9.5-9.8 sol |
-| 50 sol | 48-49 sol |
-| 100 sol | 96-98 sol |
+volume bot generates 3-4x your input in trading volume:
 
-losses are from:
-- trading slippage
-- token spread
-- platform fees
-- transaction gas
+**example session (0.1 sol input, 30 min):**
+```
+input:     0.1 sol
+volume:    0.39 sol (3.9x multiplier)
+trades:    52 (26 buys + 26 sells)
+fee:       0.003 sol (3%)
+```
+
+**cost breakdown:**
+
+| cost | % of input | notes |
+|------|------------|-------|
+| platform fee | 3% | flat fee on input |
+| slippage | 2-5% | per buy/sell cycle |
+| gas | <1% | ~0.00001 sol per tx |
+
+**what happens to your sol:**
+1. distributed across volume wallets
+2. wallets execute random buy/sell cycles
+3. sol is recycled through trades (not lost)
+4. at session end, tokens sold and sol consolidated
+5. final return depends on token price movement
+
+<Warning>
+if token price drops during session, you may get back less than input. if it rises, you may get back more.
+</Warning>
 
 ## tips
 
